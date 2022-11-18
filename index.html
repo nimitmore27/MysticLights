@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MysticLights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">
+            Random Paragraph
+        </h1>
+        <p class="para">
+            The shades were closed keeping the room dark.
+            Peter knew that he should open them and let in the sunlight so he could begin the day,
+            but he didn't have the energy or willpower.
+            Nothing had gone as expected the day before and he no longer wanted to spend the energy to begin a new day.
+            He stared at the shades wondering if there was a way to disappear from the reality of the world for the rest of the day.
+        </p>
+    </div>
+
+    <br>
+    <div class="btndiv">
+        <button class="btn">Animate Paragraph</button>
+        <button class="btn">Animate Heading</button>
+    </div>
+    <script>
+        const para = document.querySelector('.para');
+        const heading = document.querySelector('.heading'); 
+        document.querySelectorAll('.btn')[0].addEventListener('click',()=>{
+            if(para.classList.contains('activep')){
+                para.classList.remove('activep');
+            }else{
+                para.classList.add('activep');
+            }
+        })
+        document.querySelectorAll('.btn')[1].addEventListener('click',()=>{
+            if(heading.classList.contains('activeh')){
+                heading.classList.remove('activeh');
+            }else{
+                heading.classList.add('activeh');
+            }
+        })
+    </script>
+</body>
+</html>
